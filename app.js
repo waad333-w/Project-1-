@@ -62,6 +62,13 @@ timer = setInterval(function(){
 }
 
 
+let playAgain = document.getElementById("startGame");
+
+startGame.addEventListener("click", function(){
+    gameStarted = true;
+    chooseObject();
+    startTimer;
+});
 
 
 
