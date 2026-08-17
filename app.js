@@ -28,6 +28,8 @@ let gameStarted = false;
 
 function startTimer() {
 
+    clearInterval(timer);
+
     timeLeft = 20;
 
     timerText.textContent = "Time: " + timeLeft;
