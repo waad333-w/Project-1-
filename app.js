@@ -91,6 +91,20 @@ for (let i = 0; i < objects.length; i++) {
 }
 
 
+let playAgain = document.getElementById("playAgain");
+
+playAgain.addEventListener("click", function(){
+
+    clearInterval(timer);
+
+    gameStarted = true;
+
+    chooseObject();
+
+    startTimer();
+});
+
+
 
 
 
