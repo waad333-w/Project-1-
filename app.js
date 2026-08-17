@@ -1,17 +1,5 @@
 let objects = document.querySelectorAll(".object");
 
-for (let i = 0; i < objects.length; i++) {
-    objects[i].addEventListener("click", function () {
-
-        let clickedObject = objects[i].id;
-        if (clickedObject === wantedObject) {
-            console.log("correct!");
-        }
-
-    });
-}
-
-
 
 
 let message = document.getElementById("message");
@@ -23,10 +11,10 @@ function chooseObject() {
     let randomnumber = Math.floor(Math.random() * objects.length);
     wantedObject = objects[randomnumber].id;
 
+    message.textContent = "Zozi wants " + wantedObject + "!";
+ 
 }
 
-chooseObject();
-message.textContent = "zozi wants " + wantedObject + "!";
 
 
 
@@ -34,7 +22,7 @@ let timerText = document.getElementById("timer");
 
 let timer;
 
-let timerLeft = 20;
+let timeLeft = 20;
 
 let gameStarted = false;
 
@@ -42,15 +30,15 @@ function startTimer() {
 
     timeLeft = 20;
 
-    timerText.textContent = "Time: " + timerLeft;
+    timerText.textContent = "Time: " + timeLeft;
 
     timer = setInterval(function () {
 
         timeLeft--;
 
-        timer.textContent = "Time: " + timerLeft;
+        timerText.textContent = "Time: " + timeLeft;
 
-        if (timerLeft === 0) {
+        if (timeLeft === 0) {
 
             clearInterval(timer);
 
@@ -62,7 +50,8 @@ function startTimer() {
 }
 
 
-let playAgain = document.getElementById("startGame");
+
+let startGame = document.getElementById("startGame");
 
 startGame.addEventListener("click", function () {
     gameStarted = true;
@@ -100,6 +89,8 @@ for (let i = 0; i < objects.length; i++) {
         }
     });
 }
+
+
 
 
 
