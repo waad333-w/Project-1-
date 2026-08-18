@@ -67,6 +67,7 @@ function chooseObject() {
 let timer;
 let timeLeft = 10;
 let gameStarted = false;
+let shuffleTimer;
 
 function startTimer() {
 
@@ -85,6 +86,7 @@ function startTimer() {
         if (timeLeft === 0) {
 
             clearInterval(timer);
+            clearInterval(shuffleTimer);
 
             gameStarted = false;
 
@@ -105,6 +107,7 @@ startGame.addEventListener("click", function () {
     timerText.style.display ="block";
 
     shuffleObjects();
+    shuffleTimer = setInterval(shuffleObjects , 2000);
     chooseObject();
     startTimer();
 });
@@ -126,6 +129,7 @@ for (let i = 0; i < objects.length; i++) {
         if (clickedObject === wantedObject) {
 
             clearInterval(timer);
+            clearInterval(shuffleTimer);
 
             gameStarted = false;
 
@@ -153,6 +157,7 @@ playAgain.addEventListener("click", function(){
     playAgain.style.display= "none";
 
     shuffleObjects();
+    shuffleTimer = setInterval(shuffleObjects, 2000);
 
     chooseObject();
 
