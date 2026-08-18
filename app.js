@@ -169,16 +169,3 @@ function shuffleObjects(){
         objects[i].style.order = randomOrder;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
