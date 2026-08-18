@@ -57,6 +57,7 @@ let startGame = document.getElementById("startGame");
 
 startGame.addEventListener("click", function () {
     gameStarted = true;
+    shuffleObjects();
     chooseObject();
     startTimer();
 });
@@ -95,11 +96,16 @@ for (let i = 0; i < objects.length; i++) {
 
 let playAgain = document.getElementById("playAgain");
 
+function changeOrder(){
+
+}
 playAgain.addEventListener("click", function(){
 
     clearInterval(timer);
 
     gameStarted = true;
+    
+    shuffleObjects();
 
     chooseObject();
 
@@ -107,7 +113,14 @@ playAgain.addEventListener("click", function(){
 });
 
 
+function shuffleObjects(){
+    for(let i=0; i< objects.length; i++){
 
+    
+        let randomOrder = Math.floor(Math.random()* objects.length);
+        objects[i].style.order = randomOrder;
+    }
+}
 
 
 
