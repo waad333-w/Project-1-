@@ -1,5 +1,8 @@
 let objects = document.querySelectorAll(".object");
 
+let startGame = document.getElementById("startGame");
+let playAgain = document.getElementById("playAgain");
+playAgain.style.display ="none";
 
 
 let message = document.getElementById("message");
@@ -47,16 +50,20 @@ function startTimer() {
             gameStarted = false;
 
             message.textContent = "You lose!";
+            playAgain.style.display= "block";
         }
     }, 1000);
 }
 
 
 
-let startGame = document.getElementById("startGame");
 
 startGame.addEventListener("click", function () {
     gameStarted = true;
+
+    startGame.style.display ="none";
+    playAgain.style.display ="none";
+
     shuffleObjects();
     chooseObject();
     startTimer();
@@ -83,6 +90,7 @@ for (let i = 0; i < objects.length; i++) {
             gameStarted = false;
 
             message.textContent = "You Win!";
+            playAgain.style.display= "block";
 
 
         } else {
@@ -94,17 +102,16 @@ for (let i = 0; i < objects.length; i++) {
 }
 
 
-let playAgain = document.getElementById("playAgain");
 
-function changeOrder(){
 
-}
+
 playAgain.addEventListener("click", function(){
 
-    clearInterval(timer);
 
     gameStarted = true;
-    
+
+    playAgain.style.display= "none";
+
     shuffleObjects();
 
     chooseObject();
