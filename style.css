@@ -6,7 +6,7 @@ body{
     background-color: #ffd6e7;
     color: #5a3150;
     margin: 0;
-    height: 1080px;
+    height: 100vh;
     text-align: center;
     overflow: hidden;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -72,7 +72,7 @@ h3{
 }
 
 .zozi img{
-    width: 120px;
+    width: 140px;
 }
 
 #timer{

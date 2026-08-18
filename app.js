@@ -1,11 +1,15 @@
 let objects = document.querySelectorAll(".object");
-
 let startGame = document.getElementById("startGame");
 let playAgain = document.getElementById("playAgain");
-playAgain.style.display ="none";
-
-
+let timerText = document.getElementById("timer");
 let message = document.getElementById("message");
+
+
+playAgain.style.display ="none";
+timerText.style.display ="none";
+
+
+
 
 let wantedObject;
 
@@ -51,37 +55,32 @@ function chooseObject() {
     }   else if(wantedObject === "star"){
         message.textContent = "Twinkle twinkle! Find the star?";
     }   else if(wantedObject === "strawBerryMilk"){
-        message.textContent = "StrawBerryMilk time? find it";
+        message.textContent = "Find the Strawberry Milk ";
     }   
 
-
- 
 }
 
 
 
 
-let timerText = document.getElementById("timer");
 
 let timer;
-
-let timeLeft = 20;
-
+let timeLeft = 10;
 let gameStarted = false;
 
 function startTimer() {
 
     clearInterval(timer);
 
-    timeLeft = 20;
+    timeLeft = 10;
 
-    timerText.textContent = "Time: " + timeLeft;
+    timerText.textContent = "⏳Time: " + timeLeft;
 
     timer = setInterval(function () {
 
         timeLeft--;
 
-        timerText.textContent = "Time: " + timeLeft;
+        timerText.textContent = "⏳Time: " + timeLeft;
 
         if (timeLeft === 0) {
 
@@ -103,6 +102,7 @@ startGame.addEventListener("click", function () {
 
     startGame.style.display ="none";
     playAgain.style.display ="none";
+    timerText.style.display ="block";
 
     shuffleObjects();
     chooseObject();
@@ -158,6 +158,7 @@ playAgain.addEventListener("click", function(){
 
     startTimer();
 });
+
 
 
 function shuffleObjects(){
