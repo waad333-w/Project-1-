@@ -14,7 +14,47 @@ function chooseObject() {
     let randomnumber = Math.floor(Math.random() * objects.length);
     wantedObject = objects[randomnumber].id;
 
-    message.textContent = "Zozi wants " + wantedObject + "!";
+    if(wantedObject === "gift"){
+        message.textContent = "zozi wants to open a gift";
+    } else if(wantedObject === "bee"){
+        message.textContent = "Can you catch the bee?";
+    } else if(wantedObject === "camera"){
+        message.textContent = "Say cheese! Find the camera";
+    }  else if(wantedObject === "cookies"){
+        message.textContent = "zozi is hungry! Find the cookies";
+    }  else if(wantedObject === "cherry"){
+        message.textContent = "zozi found a cherry! Grab it";
+    } else if(wantedObject === "blueCap"){
+        message.textContent = "Where is the blue cap?";
+    }   else if(wantedObject === "blueFish"){
+        message.textContent = "Zozi is hungry for a blue fish!";
+    }  else if(wantedObject === "boba"){
+        message.textContent = "Boba time! Find the drink";
+    }   else if(wantedObject === "cupCake"){
+        message.textContent = "where is the cupcake?";
+    }   else if(wantedObject === "duck"){
+        message.textContent = "zozi found a friend! Find the duck?";
+    }   else if(wantedObject === "glasses"){
+        message.textContent = "Time to put on glasses!";
+    }   else if(wantedObject === "book"){
+        message.textContent = "Story time?";
+    }   else if(wantedObject === "goldenFish"){
+        message.textContent = "Zozi spotted a shiny fish!";
+    }   else if(wantedObject === "pinkHat"){
+        message.textContent = "zozi needs her pink hat!";
+    }   else if(wantedObject === "iceCream"){
+        message.textContent = "zozi is craving something cold!";
+    }   else if(wantedObject === "mouse"){
+        message.textContent = "A little mouse is hiding";
+    }   else if(wantedObject === "sunFlower"){
+        message.textContent = "Find the sunflower!";
+    }   else if(wantedObject === "star"){
+        message.textContent = "Twinkle twinkle! Find the star?";
+    }   else if(wantedObject === "strawBerryMilk"){
+        message.textContent = "StrawBerryMilk time? find it";
+    }   
+
+
  
 }
 
